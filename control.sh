@@ -1,9 +1,9 @@
 #!/bin/sh
+# control.sh - http://github.com/salaman/brew-webstack-control
 #
 # Script to control a Homebrew-installed NGINX + PHP-FPM + MySQL stack.
 # Potentially extendable to other processes (see configuration below).
 #
-# Author: Chris P. - http://github.com/salaman
 # This file is public domain and comes with NO WARRANTY of any kind.
 #
 # Configuration:
@@ -27,8 +27,8 @@
 #   Custom command used to reload process configuration.
 #   If absent, process will be skipped during reload.
 #
-#   In CONF_STOP and CONF_RELOAD, any occurence of the string
-#   "__PID__" will be replaced with the running process' PID.
+# In CONF_STOP and CONF_RELOAD, any occurence of the string
+# "__PID__" will be replaced with the running process' PID.
 #
 
 i=0 # Configuration start, do not change
