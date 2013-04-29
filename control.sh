@@ -70,7 +70,7 @@ is_running() {
     if [ "$#" -eq "1" ]; then
         if [ -z "${CONF_PID[$1]}" ]; then # Check if there is a pidfile in conf
             echo "\033[33mPlease specify a pidfile for $(basename ${CONF_PATH[$1]}).\033[m"
-        elif [ -r "${CONF_PID[$1]}" ]; then # Check if the pidfile exists
+        elif [ -r "${CONF_PID[$1]}" -a -s "${CONF_PID[$1]}" ]; then # Check if the pidfile exists
             PROC_PID=`cat ${CONF_PID[$1]}`
             local P_COUNT=`ps xww -o pid= -p ${PROC_PID}` # Make sure the PID actually exists
             if [ "$P_COUNT" -ge "0" ]; then
