@@ -39,7 +39,7 @@ i=0 # Configuration start, do not change
 
 ## nginx
 
-CONF_PATH[$i]="$(brew --prefix nginx)/sbin/nginx"
+CONF_PATH[$i]="$(brew --prefix nginx)/bin/nginx"
 CONF_PID[$i]="/usr/local/var/run/nginx.pid"
 CONF_SUDO[$i]=true
 CONF_RELOAD[$i]="${CONF_PATH[$i]} -s reload"
